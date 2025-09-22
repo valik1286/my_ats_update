@@ -83,7 +83,8 @@ def get_response(user_input, knowledge_base):
             return "Невірний формат. Використовуйте: навчи слово це значення."
 
     if user_input_lower == "вийти":
-        return "До побачення, Користувач! Був радий поспілкуватися."
+        print("До побачення, Користувач! Був радий поспілкуватися.")
+        sys.exit(0)  # <-- тут додаємо реальне завершення
     elif user_input_lower == "про мене":
         return f"{AI_NAME} - версія {VERSION} від {AUTHOR}. Я твій персональний помічник, що чекає на команди."
     elif user_input_lower == "допомога":
@@ -102,6 +103,7 @@ def get_response(user_input, knowledge_base):
             return value
 
     return "Я не розумію. Спробуй 'допомога'."
+
 
 # --- Завантаження динамічних модів з папки 'mods' ---
 def load_mods():
