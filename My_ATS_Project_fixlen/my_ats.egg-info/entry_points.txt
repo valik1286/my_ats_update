@@ -1,0 +1,2 @@
+[console_scripts]
+run-ats = my_ats.ats_runner:start_chat_console
